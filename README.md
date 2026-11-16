@@ -100,8 +100,8 @@ Advanced-Programming-for-DS/
 | File / Folder | Description |
 |---|---|
 | `README.md` | This course guide and progress tracker |
-| `Chapter-01- Introduction_to_Git-1.pdf` | Lecture slides: Introduction to Git |
-| `README_llm_10_topics.md` | Week 5 summary: LLM evaluation topics 1–10 |
+| `WEEK1_Chapter-01- Introduction_to_Git-1.pdf` | Lecture slides: Introduction to Git |
+| `WEEK5_README_llm_10_topics.md` | Week 5 summary: LLM evaluation topics 1–10 |
 | `report_llm_10_topic/` | Full Week 5 report: DOCX, PDF, demo script, and README |
 
 ---
