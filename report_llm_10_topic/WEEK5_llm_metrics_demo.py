@@ -1,7 +1,7 @@
 """Small, beginner-friendly LLM evaluation demonstration.
 
 Prepared by DOEUN Bunheng — I5_AMS_A.
-Run: python llm_metrics_demo.py
+Run: python WEEK5_llm_metrics_demo.py
 
 The core demonstrations use only Python's standard library.
 Optional text-generation metrics require third-party packages.

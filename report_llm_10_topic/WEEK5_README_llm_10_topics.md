@@ -562,10 +562,10 @@ python -m pip install bert-score torch
 
 ### 2. Run the companion demonstration
 
-I included a small **[`llm_metrics_demo.py`](llm_metrics_demo.py)** file with runnable functions and simple tests. Its basic string/classification/edit-distance examples use only Python's standard library; it also includes optional demonstrations for BLEU, ROUGE, METEOR, and BERTScore.
+I included a small **[`WEEK5_llm_metrics_demo.py`](WEEK5_llm_metrics_demo.py)** file with runnable functions and simple tests. Its basic string/classification/edit-distance examples use only Python's standard library; it also includes optional demonstrations for BLEU, ROUGE, METEOR, and BERTScore.
 
 ```bash
-python llm_metrics_demo.py
+python WEEK5_llm_metrics_demo.py
 ```
 
 In Jupyter Notebook, you can copy the code examples from this README into individual cells instead.
