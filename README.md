@@ -1,10 +1,17 @@
 # 🚀 Advanced Programming for Data Science
 
+**Student:** DOEUN Bunheng · **Class:** I5_AMS_A · **School:** Institute of Technology of Cambodia (ITC)
+**Repository:** <https://github.com/doeunbunheng/Advanced-Programming-for-DS>
+
+> This repository is my personal workspace for the course. It collects lecture notes, TPs, assignments, homework, practice code, and projects, and it doubles as my study plan and progress tracker.
+
+---
+
 ## 📌 Course Overview
 
-**Course:** Advanced Programming for Data Science  
-**Short Name:** Advanced Programming for DS  
-**Main Language:** Python  
+**Course:** Advanced Programming for Data Science
+**Short Name:** Advanced Programming for DS
+**Main Language:** Python
 **Purpose:** Learn advanced programming techniques and apply them to real Data Science problems.
 
 This repository contains all materials related to the course, including:
@@ -21,7 +28,7 @@ This repository contains all materials related to the course, including:
 
 ---
 
-# 🎯 Learning Objectives
+## 🎯 Learning Objectives
 
 By the end of this course, I should be able to:
 
@@ -40,7 +47,9 @@ By the end of this course, I should be able to:
 
 ---
 
-# 📂 Course Structure
+## 📂 Course Structure
+
+> **Note:** This is the planned organization as the course grows. During the semester, submitted work lives on dedicated Git branches (see [Git Workflow](#-git-workflow-branch-per-deliverable) below), and finished reports may also appear at the repository root.
 
 ```text
 Advanced-Programming-for-DS/
@@ -86,9 +95,95 @@ Advanced-Programming-for-DS/
 └── 09_Exam_Preparation/
 ```
 
+### Current Files at the Repository Root
+
+| File / Folder | Description |
+|---|---|
+| `README.md` | This course guide and progress tracker |
+| `Chapter-01- Introduction_to_Git-1.pdf` | Lecture slides: Introduction to Git |
+| `README_llm_10_topics.md` | Week 5 summary: LLM evaluation topics 1–10 |
+| `report_llm_10_topic/` | Full Week 5 report: DOCX, PDF, demo script, and README |
+
 ---
 
-# 📖 1. Lectures
+## 🌿 Git Workflow (Branch per Deliverable)
+
+Each deliverable is developed on its own branch and merged into `main` through a pull request.
+
+| Branch | Purpose | Example |
+|---|---|---|
+| `main` | Stable, merged work and finished reports | `main` |
+| `lecture/week-NN` | Lecture notes and class summaries | `lecture/week-01` |
+| `tp/tp-NN` | TP / lab submissions | `tp/tp-03` |
+| `assignment/assignment-NN` | Assignment submissions | `assignment/assignment-01` |
+| `homework/hw-NN` | Homework submissions | `homework/hw-01` |
+
+Typical loop:
+
+```bash
+git fetch origin
+git switch -c tp/tp-05 origin/main
+
+# write code and notes, then commit
+git add .
+git commit -m "Add TP05 ..."
+git push -u origin tp/tp-05
+```
+
+Then open a pull request into `main`.
+
+> **Tip:** Avoid working directly on `main`. Keeping each deliverable on its own branch makes history easier to review and mistakes easier to undo.
+
+---
+
+## ⚙️ Getting Started
+
+### Requirements
+
+- Python 3.10 or newer (`python --version`)
+- Git
+- JupyterLab, Jupyter Notebook, or VS Code with the Jupyter extension
+- Internet access for package installation and dataset downloads
+
+### Setup
+
+```bash
+git clone https://github.com/doeunbunheng/Advanced-Programming-for-DS.git
+cd Advanced-Programming-for-DS
+
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS / Linux
+source .venv/bin/activate
+
+python -m pip install --upgrade pip
+python -m pip install numpy pandas matplotlib scikit-learn jupyterlab
+```
+
+### Verify the installation
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib
+
+print("NumPy:", np.__version__)
+print("Pandas:", pd.__version__)
+print("Matplotlib:", matplotlib.__version__)
+```
+
+Output (versions depend on the installation):
+
+```text
+NumPy: 2.x.x
+Pandas: 2.x.x
+Matplotlib: 3.x.x
+```
+
+---
+
+## 📖 1. Lectures
 
 This folder contains materials learned during class.
 
@@ -125,9 +220,9 @@ Topics:
 
 ---
 
-# 🧪 2. TP / Lab
+## 🧪 2. TP / Lab
 
-**TP = Travaux Pratiques / Practical Work**
+**TP** stands for *Travaux Pratiques* (French for practical work).
 
 TP is where I practice what I learned in class.
 
@@ -160,7 +255,7 @@ What I learned:
 
 ---
 
-# 📝 3. Assignments
+## 📝 3. Assignments
 
 Assignments are larger tasks that may combine several lessons.
 
@@ -202,7 +297,7 @@ Submit
 
 ---
 
-# 🏠 4. Homework
+## 🏠 4. Homework
 
 Homework is used to reinforce concepts learned in class.
 
@@ -229,11 +324,11 @@ This makes revision easier before the exam.
 
 ---
 
-# 💻 5. Programming Practice
+## 💻 5. Programming Practice
 
 I should regularly practice small coding problems.
 
-## Python
+### Python
 
 Practice:
 
@@ -257,6 +352,7 @@ Example:
 def calculate_mean(values):
     return sum(values) / len(values)
 
+
 data = [10, 20, 30, 40]
 
 print(calculate_mean(data))
@@ -270,7 +366,7 @@ Output:
 
 ---
 
-# 🔢 6. NumPy
+## 🔢 6. NumPy
 
 Important topics:
 
@@ -302,7 +398,7 @@ Output:
 
 ---
 
-# 🐼 7. Pandas
+## 🐼 7. Pandas
 
 Important topics:
 
@@ -332,7 +428,7 @@ print(df.describe())
 
 ---
 
-# 🧹 8. Data Cleaning
+## 🧹 8. Data Cleaning
 
 Practice:
 
@@ -364,7 +460,7 @@ Clean Dataset
 
 ---
 
-# 📊 9. Data Visualization
+## 📊 9. Data Visualization
 
 Libraries:
 
@@ -388,7 +484,7 @@ Before creating a visualization, ask:
 
 ---
 
-# 🧱 10. Object-Oriented Programming
+## 🧱 10. Object-Oriented Programming
 
 Important concepts:
 
@@ -419,9 +515,15 @@ student1 = Student("Student A", 90)
 student1.display()
 ```
 
+Output:
+
+```text
+Student A 90
+```
+
 ---
 
-# ⚠️ 11. Exception Handling
+## ⚠️ 11. Exception Handling
 
 Example:
 
@@ -449,7 +551,7 @@ raise
 
 ---
 
-# 📁 12. File Handling
+## 📁 12. File Handling
 
 Practice:
 
@@ -459,6 +561,8 @@ with open("data.txt", "r") as file:
 
 print(content)
 ```
+
+The `with` statement closes the file automatically, even if an error occurs.
 
 Learn how to work with:
 
@@ -471,7 +575,7 @@ Learn how to work with:
 
 ---
 
-# 🧩 13. Functions and Modules
+## 🧩 13. Functions and Modules
 
 Learn how to divide large programs into smaller reusable pieces.
 
@@ -495,14 +599,14 @@ project/
 
 ---
 
-# 🐞 14. Debugging
+## 🐞 14. Debugging
 
 When code does not work:
 
 ```text
 Read Error
     ↓
-Find Error Line
+Locate Error Line
     ↓
 Understand Error Type
     ↓
@@ -527,7 +631,7 @@ FileNotFoundError
 
 ---
 
-# 🧪 15. Testing
+## 🧪 15. Testing
 
 Simple example:
 
@@ -540,11 +644,11 @@ assert add(2, 3) == 5
 assert add(10, 5) == 15
 ```
 
-Testing helps make sure our program behaves correctly.
+Testing helps make sure our program behaves correctly. For larger projects, the same idea can be organized with `pytest`.
 
 ---
 
-# ⚡ 16. Code Efficiency
+## ⚡ 16. Code Efficiency
 
 Compare different solutions based on:
 
@@ -573,7 +677,7 @@ O(n²)
 
 ---
 
-# 📊 17. Data Science Programming Workflow
+## 📊 17. Data Science Programming Workflow
 
 A common Data Science workflow:
 
@@ -603,7 +707,7 @@ Communicate Results
 
 ---
 
-# 🧠 Study Method
+## 🧠 Study Method
 
 For every new topic, I should follow:
 
@@ -625,7 +729,7 @@ The most important step is:
 
 ---
 
-# 📅 Weekly Study Routine
+## 📅 Weekly Study Routine
 
 | Day | Activity |
 |---|---|
@@ -639,7 +743,7 @@ The most important step is:
 
 ---
 
-# ✅ Weekly Checklist
+## ✅ Weekly Checklist
 
 At the end of every week:
 
@@ -656,57 +760,57 @@ At the end of every week:
 
 ---
 
-# 📝 Topic Study Template
+## 📝 Topic Study Template
 
 For every important concept:
 
-## Topic
+### Topic
 
-### 1. What is it?
+#### 1. What is it?
 
 Write a simple definition.
 
-### 2. Why do we use it?
+#### 2. Why do we use it?
 
 Explain the purpose.
 
-### 3. When do we use it?
+#### 3. When do we use it?
 
 Give a real programming situation.
 
-### 4. Syntax
+#### 4. Syntax
 
 ```python
 # syntax here
 ```
 
-### 5. Example
+#### 5. Example
 
 ```python
 # example here
 ```
 
-### 6. Output
+#### 6. Output
 
 ```text
 output here
 ```
 
-### 7. Important Notes
+#### 7. Important Notes
 
 Write important things to remember.
 
-### 8. Common Mistakes
+#### 8. Common Mistakes
 
 Write mistakes that I made.
 
-### 9. Practice
+#### 9. Practice
 
 Create at least 2–3 small exercises.
 
 ---
 
-# 📚 Exam Preparation
+## 📚 Exam Preparation
 
 Before the exam, review:
 
@@ -751,7 +855,7 @@ How can we improve this code?
 
 ---
 
-# 🎯 Assignment Tracker
+## 🎯 Assignment Tracker
 
 | Assignment | Topic | Deadline | Status | Score |
 |---|---|---|---|---|
@@ -769,18 +873,18 @@ Status:
 
 ---
 
-# 🧪 TP Tracker
+## 🧪 TP Tracker
 
 | TP | Topic | Status | Review |
 |---|---|---|---|
-| TP01 | TBD | ⬜ | ⬜ |
-| TP02 | TBD | ⬜ | ⬜ |
-| TP03 | TBD | ⬜ | ⬜ |
-| TP04 | TBD | ⬜ | ⬜ |
+| TP01 | Introduction to Python programming concepts | ✅ | ⬜ |
+| TP02 | OOP exercises 1–5 | ✅ | ⬜ |
+| TP03 | LLM fine-tuning with Unsloth — lesson summary | ✅ | ⬜ |
+| TP04 | Fine-tuning Gemma 3 with LoRA and Unsloth | ✅ | ⬜ |
 
 ---
 
-# 🏠 Homework Tracker
+## 🏠 Homework Tracker
 
 | Homework | Topic | Status |
 |---|---|---|
@@ -790,7 +894,7 @@ Status:
 
 ---
 
-# 📈 My Progress
+## 📈 My Progress
 
 ```text
 Python Fundamentals      [          ]
@@ -815,8 +919,12 @@ Pandas                   [████░░░░░░] 40%
 
 ---
 
-# 🚀 Final Goal
+## 🚀 Final Goal
 
 By the end of **Advanced Programming for Data Science**, I want to be able to:
 
-> Take a Data Science problem, organize the project, write clean Python code, process and analyze the data, debug problems, and produce a complete working solution independently.# Advanced-Programming-for-DS
+> Take a Data Science problem, organize the project, write clean Python code, process and analyze the data, debug problems, and produce a complete working solution independently.
+
+---
+
+*Maintained by DOEUN Bunheng — I5_AMS_A, ITC.*
