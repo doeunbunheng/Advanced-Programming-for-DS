@@ -7,7 +7,7 @@ This README follows the four TP04 learning objectives:
 3. **Loss Analysis:** Monitor and interpret Training Loss and Validation Loss to identify overfitting and underfitting.
 4. **Practical Experiment:** Fine-tune the model using a different dataset and compare the results.
 
-The work is in `Gemma3_(4B).ipynb`. The new dataset is `dataasilida_cleaned.csv`.
+The work is in `WEEK4_Gemma3_(4B).ipynb`. The new dataset is `dataasilida_cleaned.csv`.
 
 ### Objective coverage
 
@@ -24,13 +24,13 @@ The work is in `Gemma3_(4B).ipynb`. The new dataset is `dataasilida_cleaned.csv`
 
 | File | Purpose |
 | --- | --- |
-| `Gemma3_(4B).ipynb` | Unsloth notebook adapted for this TP |
+| `WEEK4_Gemma3_(4B).ipynb` | Unsloth notebook adapted for this TP |
 | `dataasilida_cleaned.csv` | Khmer customer-support question/answer dataset |
-| `README.md` | Notes, configuration, and experiment report |
+| `WEEK4_README_TP_04.md` | Notes, configuration, and experiment report |
 
 **Environment:** Google Colab with a GPU (the notebook was designed for Colab). Upload `dataasilida_cleaned.csv` to the same folder as the notebook before running it. The first cells install Unsloth, TRL, and the Gemma 3 version of Transformers.
 
-**Environment actually used for this submission:** Windows 11 + WSL2 Ubuntu 26.04 on a laptop with an NVIDIA RTX 4060 Laptop GPU (8 GB VRAM) and 7 GB RAM. Python 3.12 virtual environment with torch 2.14.1+cu130, Unsloth 2026.11.3 and Transformers 5.17.0. The notebook was executed locally from top to bottom with `nbconvert --execute` and finished with **0 errors**; every output shown in `Gemma3_(4B).ipynb` comes from that run. Because the laptop GPU has 8 GB, the model cell loads the pre-quantised 4-bit checkpoint `unsloth/gemma-3-4b-it-unsloth-bnb-4bit` (identical weights and settings to `unsloth/gemma-3-4b-it`, quantised ahead of time so the download is 4.6 GB instead of 8.5 GB). **No training hyperparameter from section 2.2 was changed.** The pip-install cells detect an existing Unsloth installation and skip themselves, so the notebook still runs unchanged on Colab.
+**Environment actually used for this submission:** Windows 11 + WSL2 Ubuntu 26.04 on a laptop with an NVIDIA RTX 4060 Laptop GPU (8 GB VRAM) and 7 GB RAM. Python 3.12 virtual environment with torch 2.14.1+cu130, Unsloth 2026.11.3 and Transformers 5.17.0. The notebook was executed locally from top to bottom with `nbconvert --execute` and finished with **0 errors**; every output shown in `WEEK4_Gemma3_(4B).ipynb` comes from that run. Because the laptop GPU has 8 GB, the model cell loads the pre-quantised 4-bit checkpoint `unsloth/gemma-3-4b-it-unsloth-bnb-4bit` (identical weights and settings to `unsloth/gemma-3-4b-it`, quantised ahead of time so the download is 4.6 GB instead of 8.5 GB). **No training hyperparameter from section 2.2 was changed.** The pip-install cells detect an existing Unsloth installation and skip themselves, so the notebook still runs unchanged on Colab.
 
 ---
 
@@ -231,7 +231,7 @@ args = TrainingArguments(
 
 ### 2.4 Run the notebook step by step
 
-1. Open `Gemma3_(4B).ipynb` in Google Colab.
+1. Open `WEEK4_Gemma3_(4B).ipynb` in Google Colab.
 2. Select **Runtime → Change runtime type → GPU**.
 3. Upload `dataasilida_cleaned.csv` to `/content` (the same folder as the notebook).
 4. Run the installation cells. If Colab asks you to restart the runtime, restart it and continue from the model-loading cell.
